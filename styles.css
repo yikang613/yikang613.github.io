@@ -148,6 +148,17 @@ h1 {
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
 }
 
+.hero-status {
+  width: fit-content;
+  margin-bottom: 1.4rem;
+  padding: 0.3rem 0.65rem;
+  color: var(--ink);
+  background: var(--accent-pale);
+  border-left: 4px solid var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .contact-list {
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +195,7 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   background: var(--surface);
   border: 1px solid var(--line-strong);
@@ -409,7 +420,7 @@ footer a {
 
   .portrait {
     order: -1;
-    width: 150px;
+    width: 170px;
   }
 
   .section {
