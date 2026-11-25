@@ -1,40 +1,23 @@
-name: Deploy GitHub Pages
+name: Validate site
+
+# Publishing is handled by GitHub's built-in "pages build and deployment"
+# (Settings -> Pages -> Deploy from a branch: main). This workflow only checks
+# the page before/after it goes live.
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
       - name: Validate static site
         run: python scripts/validate_site.py
-      - name: Assemble static site
-        run: |
-          mkdir -p _site
-          cp -r index.html styles.css .nojekyll assets _site/
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
