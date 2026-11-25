@@ -7,9 +7,9 @@
     <meta name="theme-color" content="#0b1736">
     <meta
       name="description"
-      content="Yikang Li is a Biomedical Engineering Ph.D. candidate at Vanderbilt University working on medical imaging, machine learning, and evidence-grounded AI."
+      content="Yikang Li is a Biomedical Engineering Ph.D. researcher at Vanderbilt University working on representation learning and LLM agents for biomedical data."
     >
-    <title>Yikang Li — Medical Imaging & Machine Learning</title>
+    <title>Yikang Li — AI for Science</title>
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
       {
@@ -17,6 +17,7 @@
         "@type": "Person",
         "name": "Yikang Li",
         "url": "https://yikang613.github.io/",
+        "image": "https://yikang613.github.io/assets/yikang-li.jpg",
         "affiliation": {
           "@type": "CollegeOrUniversity",
           "name": "Vanderbilt University"
@@ -25,7 +26,11 @@
           { "@type": "CollegeOrUniversity", "name": "Imperial College London" },
           { "@type": "CollegeOrUniversity", "name": "Michigan State University" }
         ],
-        "sameAs": ["https://github.com/yikang613"]
+        "sameAs": [
+          "https://github.com/yikang613",
+          "https://scholar.google.com/citations?user=kl9S7IMAAAAJ",
+          "https://www.linkedin.com/in/yikang-li-5bb346222"
+        ]
       }
     </script>
   </head>
@@ -35,206 +40,237 @@
     <header class="site-header">
       <a class="wordmark" href="#top" aria-label="Yikang Li, home">YL<span>.</span></a>
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
-        <a href="#background">Background</a>
-        <a href="https://github.com/yikang613" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="https://scholar.google.com/citations?user=kl9S7IMAAAAJ" target="_blank" rel="noreferrer">Scholar</a>
       </nav>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Medical imaging · Machine learning · Research systems</p>
+          <p class="eyebrow">AI for Science · Representation Learning and LLM Agents for Biomedical Data</p>
           <h1 id="hero-title">Yikang Li</h1>
-          <p class="hero-lede">
-            I build machine-learning methods and research tools for biomedical data—especially
-            neuroimaging—where evidence, uncertainty, and evaluation matter as much as model
-            performance.
+          <p class="hero-role">
+            Ph.D. researcher in Biomedical Engineering · Vanderbilt University
           </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore selected work</a>
-            <a class="button button-secondary" href="https://github.com/yikang613" target="_blank" rel="noreferrer">
-              View GitHub profile
-            </a>
-          </div>
+          <ul class="contact-list" aria-label="Contact and profiles">
+            <li><a href="mailto:liyikang613@gmail.com">liyikang613@gmail.com</a></li>
+            <li><a href="https://scholar.google.com/citations?user=kl9S7IMAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a></li>
+            <li><a href="https://github.com/yikang613" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/yikang-li-5bb346222" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          </ul>
         </div>
-
-        <aside class="status-card" aria-label="Current position and interests">
-          <p class="status-label">Currently</p>
-          <p class="status-title">Ph.D. Candidate</p>
-          <p>Biomedical Engineering<br>Vanderbilt University</p>
-          <dl>
-            <div>
-              <dt>Research home</dt>
-              <dd>Vanderbilt University Institute of Imaging Science</dd>
-            </div>
-            <div>
-              <dt>Expected completion</dt>
-              <dd>May 2027</dd>
-            </div>
-            <div>
-              <dt>Exploring</dt>
-              <dd>2027 applied ML, medical AI, and research science opportunities</dd>
-            </div>
-          </dl>
-        </aside>
+        <img
+          class="portrait"
+          src="assets/yikang-li.jpg"
+          width="480"
+          height="480"
+          alt="Portrait of Yikang Li"
+        >
       </section>
 
-      <section class="section" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <p class="section-index">01 / Selected work</p>
-          <h2 id="work-title">Research translated into working systems</h2>
-          <p>
-            Each project addresses a different layer of the medical-AI stack: modeling,
-            research workflow, and evidence-grounded reasoning.
+      <section class="section" id="about" aria-labelledby="about-title">
+        <h2 class="section-label" id="about-title">About</h2>
+        <div class="section-body">
+          <p class="bio">
+            I am a Biomedical Engineering Ph.D. researcher working on the evaluation of AI
+            systems where errors carry real consequences. I build agentic LLM systems that
+            ground their outputs in evidence, and predictive models for brain imaging,
+            evaluating both with subject-level cross-validation, baseline comparisons, and
+            controlled ablations. My focus is on knowing when a model's output can be
+            trusted, and on building oversight into the system itself.
           </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card project-featured">
-            <div class="project-topline">
-              <span class="project-number">01</span>
-              <span class="status-pill">Manuscript in preparation</span>
-            </div>
-            <h3>TissueLoom</h3>
-            <p class="project-type">Scientific machine learning · Brain networks</p>
-            <p>
-              A tissue-aware framework that jointly represents gray- and white-matter
-              functional connectivity across the Alzheimer's disease continuum. The model
-              combines tissue-conditioned attention, cross-tissue propagation, and an
-              anatomy-informed readout.
-            </p>
-            <ul class="project-signals" aria-label="TissueLoom technical highlights">
-              <li>Graph and transformer modeling</li>
-              <li>10 × 5-fold nested evaluation</li>
-              <li>ADNI-governed research pipeline</li>
-            </ul>
-            <a class="project-link" href="https://github.com/yikang613/TissueLoom" target="_blank" rel="noreferrer">
-              View repository <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline">
-              <span class="project-number">02</span>
-              <span class="status-pill">Active development</span>
-            </div>
-            <h3>Neuro-Audit</h3>
-            <p class="project-type">Research tooling · Evidence provenance</p>
-            <p>
-              An MRI-first, evidence-grounded skill toolkit for auditing study logic,
-              reviewing manuscripts, and planning guarded preprocessing while keeping
-              sources, numbers, uncertainty, and human decisions visible.
-            </p>
-            <ul class="project-signals" aria-label="Neuro-Audit technical highlights">
-              <li>Deterministic evidence contracts</li>
-              <li>Fail-closed data boundaries</li>
-              <li>Local and cluster-aware workflow design</li>
-            </ul>
-            <a class="project-link" href="https://github.com/yikang613/Neuro-Audit" target="_blank" rel="noreferrer">
-              View repository <span aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <article class="project-card project-private">
-            <div class="project-topline">
-              <span class="project-number">03</span>
-              <span class="status-pill status-private">Private research</span>
-            </div>
-            <h3>CopathAgent</h3>
-            <p class="project-type">Multimodal medical AI · Research in progress</p>
-            <p>
-              Evidence-grounded multimodal dementia research. The study and code remain
-              private while the scientific work is in progress; a public release is planned
-              after manuscript submission.
-            </p>
-            <p class="private-note">Details intentionally limited to protect unpublished work.</p>
-          </article>
         </div>
       </section>
 
-      <section class="section approach" id="approach" aria-labelledby="approach-title">
-        <div class="section-heading">
-          <p class="section-index">02 / Approach</p>
-          <h2 id="approach-title">Evidence before fluency</h2>
-          <p>
-            I am interested in AI systems that can be inspected, tested, and challenged—not
-            only demonstrated.
-          </p>
-        </div>
+      <section class="section" id="research" aria-labelledby="research-title">
+        <h2 class="section-label" id="research-title">Research</h2>
+        <div class="section-body">
+          <h3 class="group-title"><span>A</span>Representation learning for biomedical data</h3>
+          <ul class="entry-list">
+            <li>
+              <p class="entry-head">
+                <strong>TissueLoom</strong>
+                <a href="https://github.com/yikang613/TissueLoom" target="_blank" rel="noreferrer">Code</a>
+              </p>
+              <p>
+                A tissue-aware Transformer for fMRI classification, combining
+                tissue-conditioned attention, bidirectional gray–white affinity propagation,
+                and an anatomy-informed readout over 22 brain circuits. First-author
+                manuscript submitted to <em>Medical Image Analysis</em>.
+              </p>
+            </li>
+            <li>
+              <p class="entry-head"><strong>BrainVAE</strong></p>
+              <p>
+                A Transformer-based variational autoencoder for gray- and white-matter
+                functional connectivity, pretrained without labels and adapted to preclinical
+                Alzheimer's disease classification. First-author paper accepted by
+                <em>IEEE Transactions on Biomedical Engineering</em>; oral presentation at
+                ISMRM 2025.
+              </p>
+            </li>
+            <li>
+              <p class="entry-head"><strong>White-matter functional fingerprints</strong></p>
+              <p>
+                A graph representation learning pipeline that derives participant-level
+                embeddings from white-matter functional connectivity across cohorts.
+                Accepted as an OHBM 2026 poster.
+              </p>
+            </li>
+            <li>
+              <p class="entry-head">
+                <strong>Segmentation directly from MRI k-space</strong>
+                <a href="https://doi.org/10.21037/qims-23-946" target="_blank" rel="noreferrer">Paper</a>
+              </p>
+              <p>
+                A residual U-Net that segments brain tumors directly from complex-valued MRI
+                k-space, bypassing image reconstruction. Published in
+                <em>Quantitative Imaging in Medicine and Surgery</em>, 2024.
+              </p>
+            </li>
+          </ul>
 
-        <div class="principle-grid">
-          <article>
-            <span>01</span>
-            <h3>Trace the evidence</h3>
-            <p>Important claims should resolve to a dataset, source, transformation, or user-confirmed fact.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Make uncertainty visible</h3>
-            <p>Missing evidence stays unknown. Abstention and limitations are part of the output.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Evaluate the whole pipeline</h3>
-            <p>Leakage control, baselines, split discipline, and failure behavior matter alongside headline metrics.</p>
-          </article>
+          <h3 class="group-title"><span>B</span>LLM agents for biomedical research</h3>
+          <ul class="entry-list">
+            <li>
+              <p class="entry-head">
+                <strong>CopathAgent</strong>
+                <span class="entry-note">In progress</span>
+              </p>
+              <p>
+                A tool-calling LLM agent for dementia co-pathology that calls prediction and
+                retrieval tools to integrate longitudinal cognitive data and MRI-derived
+                features. It uses retrieval-augmented generation over reference criteria,
+                with schema-constrained outputs and source citations.
+              </p>
+            </li>
+            <li>
+              <p class="entry-head">
+                <strong>Neuro-Audit</strong>
+                <a href="https://github.com/yikang613/Neuro-Audit" target="_blank" rel="noreferrer">Code</a>
+              </p>
+              <p>
+                An open-source MRI manuscript review and drafting assistant backed by
+                versioned literature and methodology rules, with explicit states for source
+                verification and missing evidence.
+              </p>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="section background" id="background" aria-labelledby="background-title">
-        <div class="section-heading">
-          <p class="section-index">03 / Background</p>
-          <h2 id="background-title">Mathematics to medical imaging</h2>
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <h2 class="section-label" id="publications-title">Selected Publications</h2>
+        <div class="section-body">
+          <ol class="pub-list">
+            <li>
+              <p class="pub-title">
+                A novel automatic segmentation method directly based on magnetic resonance
+                imaging K-space data for auxiliary diagnosis of glioma
+              </p>
+              <p class="pub-authors"><strong>Y. Li</strong>*, Y. Qi*, Z. Hu, N. Zhang, et al.</p>
+              <p class="pub-venue">
+                <em>Quantitative Imaging in Medicine and Surgery</em>, 2024;14(2):2008–2020
+                · *co-first author ·
+                <a href="https://doi.org/10.21037/qims-23-946" target="_blank" rel="noreferrer">Paper</a>
+              </p>
+            </li>
+            <li>
+              <p class="pub-title">
+                Classification of preclinical Alzheimer's disease based on white matter
+                functional connectivity
+              </p>
+              <p class="pub-authors">
+                <strong>Y. Li</strong>, L. Xu, Y. Chang, L. Zuo, Z. Ding, A. W. Anderson,
+                K. G. Schilling, J. C. Gore, Y. Gao
+              </p>
+              <p class="pub-venue">
+                Accepted by <em>IEEE Transactions on Biomedical Engineering</em> · first author
+              </p>
+            </li>
+            <li>
+              <p class="pub-title">
+                Deep Learning-Based Automated Detection of Arterial Vessel Wall and Plaque on
+                Magnetic Resonance Vessel Wall Images
+              </p>
+              <p class="pub-authors">W. Xu, X. Yang, <strong>Y. Li</strong>, N. Zhang, et al.</p>
+              <p class="pub-venue">
+                <em>Frontiers in Neuroscience</em>, 2022;16:888814 ·
+                <a href="https://doi.org/10.3389/fnins.2022.888814" target="_blank" rel="noreferrer">Paper</a>
+              </p>
+            </li>
+            <li>
+              <p class="pub-title">
+                MaskGraphene: An advanced framework for interpretable joint representation
+                for multi-slice, multi-condition spatial transcriptomics
+              </p>
+              <p class="pub-authors">Y. Hu, <strong>Y. Li</strong>, X. Zhou, et al.</p>
+              <p class="pub-venue">
+                <em>Genome Biology</em>, 2025;26(1):380 ·
+                <a href="https://doi.org/10.1186/s13059-025-03850-w" target="_blank" rel="noreferrer">Paper</a>
+              </p>
+            </li>
+            <li>
+              <p class="pub-title">
+                The nature and interpretation of BOLD signals in white matter — A review
+              </p>
+              <p class="pub-authors">
+                J. C. Gore, M. Li, K. G. Schilling, L. Xu, <strong>Y. Li</strong>, Z. Zu,
+                A. W. Anderson, Z. Ding, Y. Gao
+              </p>
+              <p class="pub-venue">
+                <em>Magnetic Resonance Imaging</em>, 2026;127:110596 ·
+                <a href="https://doi.org/10.1016/j.mri.2025.110596" target="_blank" rel="noreferrer">Paper</a>
+              </p>
+            </li>
+          </ol>
+          <p class="list-footnote">
+            Full list on
+            <a href="https://scholar.google.com/citations?user=kl9S7IMAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>.
+          </p>
         </div>
+      </section>
 
-        <div class="background-grid">
+      <section class="section" id="education" aria-labelledby="education-title">
+        <h2 class="section-label" id="education-title">Education</h2>
+        <div class="section-body">
           <ol class="timeline">
             <li>
-              <span>2023—2027</span>
+              <span>2023 — Present</span>
               <div>
                 <h3>Vanderbilt University</h3>
-                <p>Ph.D. in Biomedical Engineering · Medical imaging and healthcare AI</p>
+                <p>
+                  Ph.D. in Biomedical Engineering · Advisor: Prof. John C. Gore · Expected
+                  completion May 2027
+                </p>
               </div>
             </li>
             <li>
-              <span>2021—2022</span>
+              <span>2021 — 2022</span>
               <div>
                 <h3>Imperial College London</h3>
                 <p>M.Sc. in Artificial Intelligence · High Merit</p>
               </div>
             </li>
             <li>
-              <span>2016—2020</span>
+              <span>2016 — 2020</span>
               <div>
                 <h3>Michigan State University</h3>
-                <p>B.Sc. in Mathematics · Advanced track</p>
+                <p>B.Sc. in Mathematics</p>
               </div>
             </li>
           </ol>
-
-          <div class="toolbox">
-            <h3>Working toolkit</h3>
-            <div class="tool-groups">
-              <div>
-                <p>ML &amp; computation</p>
-                <span>Python</span><span>PyTorch</span><span>PyTorch Geometric</span><span>Hugging Face</span><span>MATLAB</span><span>R</span>
-              </div>
-              <div>
-                <p>Imaging &amp; systems</p>
-                <span>FSL</span><span>FreeSurfer</span><span>ANTs</span><span>Linux</span><span>Hydra</span><span>HPC / SLURM</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Yikang Li · Nashville, Tennessee</p>
+      <p>Yikang Li · Nashville, USA</p>
       <p>
-        <a href="https://github.com/yikang613" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="mailto:liyikang613@gmail.com">Email</a>
         <span aria-hidden="true">/</span>
         <a href="#top">Back to top</a>
       </p>
